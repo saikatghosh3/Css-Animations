@@ -6,6 +6,7 @@
     <title>Js simple practice</title>
 </head>
 <body>
+    <button id="myBtn">Clik me! </button>
     <script>
         // check the number is even or odd
        
@@ -44,8 +45,35 @@
         console.log(numberSign(-48));
         console.log(numberSign(0));
 
-        // convert Cencious to Fahrenheit
-        
+        // convert Celcious to Fahrenheit
+        function celsiousToFohreheit(celsious) {
+            return (celsious* 9/5) +32;
+        }
+        console.log(celsiousToFohreheit(54));
+
+        // find the length of the string
+        function stringLength(str) {
+            return str.length;
+        }
+        console.log(stringLength("hello, how are, kahan kahake jana"));
+
+        // reverse the string
+        function reverseString(str){
+            return str.split('').reverse().join('')
+        }
+        console.log(reverseString("jhon cena"));
+
+        // check if a number is a multiple of 3:
+        function multiple(number){
+            return number % 3 ===0 ;
+        }
+        console.log(multiple(9));
+        console.log(multiple(8));
+         
+        const btn = document.getElementById('myBtn');
+        btn.addEventListener('click', () =>{
+            alert('you will be successed');
+        });
     </script>
 </body>
 </html>
